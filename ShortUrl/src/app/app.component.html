@@ -1,0 +1,8 @@
+<form [formGroup]="urlForm">
+  <input formControlName="url" type="text">
+  <button [disabled]="urlForm.invalid" (click)="shortUrl()">Shorten</button>
+</form>
+<div class="result" *ngIf="pathData">
+<p>Short url: <a [href]="pathData.full_short_link" target="_blank">{{pathData.full_short_link}}</a></p>
+<p>Short url 1: <a [href]="pathData.full_short_link2" target="_blank">{{pathData.full_short_link2}}</a></p>
+</div>
